@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <title>Anamorph as a tool for interactive non-rigid transformation </title>
+  
+  <script src="./assets/anamorph.js"></script>
+  <link href="./assets/bootstrap.min.css" rel="stylesheet">
+
+			<link rel="stylesheet" href="css/jqJigsawPuzzle.min.css" type="text/css"/>
+            <link rel="stylesheet" href="css/jquery-ui-1.8.22.custom.css" type="text/css"/>
+    
+            <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+            <script type="text/javascript" src="js/jquery-ui-1.8.22.custom.min.js"></script>
+            <script type="text/javascript" src="js/jqJigsawPuzzle.min.js"></script>
+  
+
+  <style>
+  #wrap {
+    width:80%;
+    margin-left: auto;
+    margin-right: auto;
+	font-size:20px;
+	}
+  .description
+	{
+		height: 400px;
+		overflow: scroll;
+		overflow-x: hidden;
+	}
+body::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+  </style>
+
+  
+ </head>
+ <body>
+
+   <div id="wrap">
+   
+   <div id="mynav" style="border-bottom:1px solid #999; padding-bottom: 10px; margin-bottom:50px;">
+    
+	
+	<div>
+      
+      <h1 style="font-size:50px;"><span style="color:#058;">Anamorph</span> as a tool for interactive <span style="color:#058;">non-rigid transformation </span></h1>
+    </div>
+    
+   </div>
+
+   <div><h1 id="about">About</h1>
+<p><strong>Anamorphism</strong>  is a reflective perception, a mathematical transformation to deform image.
+Actual image can be seen only in respective catoptric reflective mirror  from a particular vantage point</p>
+
+<h1>Why Puzzle?</h3>
+<p>It's accepted in research community tha jigsaw puzzle is benefitial for Short term memory retention,
+Pattern fitting. Analytical Planning whch is good enough to guage cognitive abilities. Its shown that it increases children's spatial abilties too.</p>
+
+<div style="text-align:justify; margin: 20px; float:right; max-width:300px;">
+<img src="./assets/ima.jpg" style="max-width:300px;"><br>
+Actual image in center and anamorphism based image in surrounding. 
+</div>
+
+<h1>Non-rigid transformation</h1>
+<p>It's quiet evident that anamorphism involves non-rigid transformations which is controlled based on surface gradient and location of viewer.</p>
+
+<h1>Methodology</h1>
+<p>After design of puzzle for test suite design was planned. User is first made aware about concepts of reflection through demonstration of transformations involving basic shapes. Some exapmples were demnstrated, Then main puzzle was given to them. </p>
+
+<h1>Test metrics</h1>
+<p>During test few metrics were captured for analysis :<br>
+<br>1. Time taken by the player to complete puzzle correctly.
+<br>2. Attenstion percentage on reflective surface. A track was maintained for fraction of time player saw refelcdted image   in surface.
+<br>3. retention probabiity of player in continuing the game
+<br>4. Role of image to gather interest
+</p>
+<br><br><br><br>
+
+<h1 id="example-library-usage" style="border-bottom:1px solid #999; padding-bottom: 10px; margin-bottom:50px;">
+1. <span style="color:#058;">Observe basic Transformations</span>
+<select id="shape" style="margin-left:27%">
+  <option value="cy">Cylinderical</option>
+  <option value="co">Conical</option>
+</select>
+</h1>
+
+
+<div style="display:inline;" >
+
+<div class="description" style="width:50%;float:left;">
+<img src="./assets/line.jpg" style="max-width:200px;padding:10px" onclick="imageLoaded(this)">
+<img src="./assets/square.jpg" style="max-width:200px;padding:10px" onclick="imageLoaded(this)">
+<img src="./assets/circle.jpg" style="max-width:200px;padding:10px" onclick="imageLoaded(this)">
+<img src="./assets/star.jpg" style="max-width:200px;padding:10px" onclick="imageLoaded(this)">
+<img src="./assets/cat.jpg" style="max-width:200px;padding:10px" onclick="imageLoaded(this)">
+</div>
+
+<div style="width:50%;float:right;">
+<canvas id="cancan2" style="float:right;"></canvas>
+</div>
+</div>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+<h1 id="example-library-usage" style="border-bottom:1px solid #999; padding-bottom: 10px; margin-bottom:50px;">
+2. <span style="color:#058;">Guess correct transformation </span>
+</h1>
+
+<div>
+<h3>&nbsp;(a) Select correct Cylinderical anamorphosis  of the image from  following ones .</h3>
+<br><br>
+<div>
+<center><img src="./assets/triangle.jpg" style="width:280px;padding:10px"></center>
+</div>
+<br><br><br>
+<h3>&nbsp;Options :</h3>
+<div>
+	<img src="./assets/a2.jpg" style="width:260px;padding:10px" onclick="alert('WRONG!!!')">
+	<img src="./assets/a3.jpg" style="width:260px;padding:10px" onclick="alert('WRONG!!!')">
+	<img src="./assets/a4.jpg" style="width:260px;padding:10px" onclick="alert('WRONG!!!')">
+	<img src="./assets/a1.jpg" style="width:260px;padding:10px" onclick="alert('CORRECT!!!')">
+</div>
+</div>
+<br><br><br><br><br><br><br><br><br>
+<div>
+<h3>&nbsp;(b) Select correct Conical anamorphosis  of the image from  following ones .</h3>
+<br><br>
+<div>
+<center><img src="./assets/polygon.jpg" style="width:280px;padding:10px"></center>
+</div>
+<br><br><br>
+<h3>&nbsp;Options :</h3>
+<div>
+	<img src="./assets/c2.jpg" style="width:260px;padding:10px" onclick="alert('WRONG!!!')">
+	<img src="./assets/c1.jpg" style="width:260px;padding:10px" onclick="alert('CORRECT!!!')">
+	<img src="./assets/c4.jpg" style="width:260px;padding:10px" onclick="alert('WRONG!!!')">
+	<img src="./assets/c3.jpg" style="width:260px;padding:10px" onclick="alert('WRONG!!!')">
+</div>
+</div>
+
+
+<br><br><br><br><br><br><br><br>
+
+
+
+<h1 id="example-library-usage" style="border-bottom:1px solid #999; padding-bottom: 10px; margin-bottom:50px;">
+3. <span style="color:#058;">Solve the  Anamorph image puzzle of given image</span>
+</h1>
+
+
+<div style="display:inline;" >
+<div style="width:50%;float:left;">
+	<img src="./assets/a.png" style="width:200px;height:200px;padding:10px" onclick="LoadPuzzle(this)">
+	
+</div>
+<div style="width:50%;float:right;">
+	<div id="puzplace"></div>
+</div>
+</div>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+<h1 style="border-bottom:1px solid #999; padding-bottom: 10px; margin-bottom:50px;">Observations</h1>
+
+<p>1. Middle age people were fast, had higher retention probability
+	<br>2. Best time: 3 minutes (21 Year, M) Puzzle 1, 5:30 minutes (16 Year, F) Puzzle 2, 
+	<br>&nbsp;&nbsp;&nbsp;>15 minutes(Partial complete>80%)Puzzle 3 
+	<br>3. Use of colour transition between neighbour pieces
+	<br>4. Type/group of image mattered
+</p>
+
+<br><br><br><br><br>
+
+<h1 style="border-bottom:1px solid #999; padding-bottom: 10px; margin-bottom:50px;">Contributors</h1>
+
+<div style="display:inline;">
+<div style="width:50%;float:left;"><a href="https://khushboosoni12.wordpress.com/"><img  src="khusboo.jpg"  style="width:160px;height:200px;" ><p>Khusboo Soni<br> Design Engineer</p></a></div>
+<div style="width:50%;float:left;"><a href="https://saketchandra.github.io"><img src="saket.jpg"  style="width:160px;height:200px;" ><p>Saket Chandra<br>Programmer,Researcher</p></a></div>
+<div>
+
+
+</div>
+</body></html>
